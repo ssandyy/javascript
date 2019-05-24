@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+    <title>Manual Form Validation</title>
+
+    <script>
+
+        function validate() {
+            let userr = document.getElementById("user");
+            let passs = document.getElementById("pass");
+
+            if (userr.value.trim() == "") {
+                userr.style.borderBottom = "solid 4px red";
+                document.getElementById("invuser").style.visibility = "visible";
+                return false;
+            }
+            else if (passs.value.trim() == "") {
+                passs.style.borderBottom = "solid 4px red";
+                document.getElementById("invpass").style.visibility = "visible";
+                return false;
+            }
+            else if (passs.value.trim().length<5) {
+                passs.style.borderBottom = "solid 4px red";
+                document.getElementById("lowpass").style.visibility = "visible";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <form action="file:///C:/Users/ssand/Desktop/rootfolder/javascript/project3/project3_making_game.html" method="post" onsubmit="return validate();">
+
+        <input id="user" type="text" placeholder="username" />
+        <lable id="invuser" style="visibility:hidden;">Invalid</lable>
+        <br /><br />
+        <input id="pass" type="text" placeholder="password" />
+        <lable id="invpass" style="visibility:hidden;">Invalid</lable>
+        <lable id="lowpass" style="color:red; visibility:hidden;">password is very short..!</lable>
+        <br /><br />
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>

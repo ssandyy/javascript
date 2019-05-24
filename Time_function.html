@@ -1,0 +1,28 @@
+﻿
+<html>
+<body>
+
+    <script>
+        let time = 0;
+        function printmsg() {
+            document.getElementById("msg").innerHTML = "welcome to javascript";
+        }
+        function start() {
+            time = window.setTimeout(printmsg, 3000)
+        }
+        function stop() {
+            window.clearTimeout(time)
+        }
+
+
+        /**/</script>
+
+        <button onclick="start()">
+        start
+    </button>
+    <h2 id="msg"> hello javascript</h2>
+    <button>
+        stop
+    </button>
+</body>
+</html>

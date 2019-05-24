@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    /*  let random = function () {
+        let getrandom = Math.floor(Math.random() * 10 +1);
+        return getrandom;
+      }
+      document.write(random());
+*/
+      //..........OR..............
+      let random1 = function (start, range) {
+        let getrandom = Math.floor(Math.random() * range + start);
+        while(getrandom > range) {
+          let getRandom = Math.floor(Math.random() * range +start);
+      }
+      return getRandom;
+    }
+    console.log(random1(5, 10));
+    </script>
+  </body>
+</html>

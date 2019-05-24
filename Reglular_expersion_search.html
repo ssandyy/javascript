@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Regular Expression search</title>
+
+
+    <script>
+        function reg_search() {
+
+            let inp = document.getElementById("inp").value;
+            let mat = document.getElementById("matching").value;
+
+            let regx = /[a-d]i/;
+            //let regx = /^[7-9][0-9]{9}$/  // for mobile number
+            //let regx = /^([a-z A-z 0-9]+)@([a-z A-z]{2,8}).([a-z]{2,3})$/  // email
+            if (regx.test(inp)) {
+                document.getElementById("labl").innerHTML = "valid";
+                document.getElementById("labl").style.color = "green";
+                document.getElementById("labl").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("labl").innerHTML = "Invalid";
+                document.getElementById("labl").style.color = "red";
+                document.getElementById("labl").style.visibility = "visible";
+            }
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <textarea id="matching" placeholder=" ener your statement.."></textarea>
+    <br />
+    <input id="inp" type="text"   />
+    <label id="labl" style="visibility:hidden">Invalid</label>
+    <br />
+    <button type="button" onclick="reg_search()">Submit</button>
+</body>
+</html>

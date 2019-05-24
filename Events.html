@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <style>
+
+        a{
+            background-color:black;
+        }
+
+        div {
+            background-color: darkslategrey;
+            line-height:20px;
+            height:600px;
+            width:300px;
+        }
+
+        div ul li {
+            list-style:none;
+        }
+
+    </style>
+
+    <a class="menu-btn" onclick="menuToggle()" href="#">Menu</a>
+    <div class="menu">
+
+        <ul>
+            <li><a href="#">link page 1</a></li>
+            <li><a href="#">link page 2</a></li>
+            <li><a href="#">link page 3</a></li>
+            <li><a href="#">link page 4</a></li>
+            <li><a href="#">link page 5</a></li>
+            <li><a href="#">link page 6</a></li>
+        </ul>
+
+    </div>
+
+    <script>
+        let mbtn = document.querySelector(".menu-btn");
+        let mnu = document.querySelector("menu");
+        let menuStatus = false;
+        
+        mnu.style.marginLeft= "-300px";
+
+        function menuToggle() {
+            if (menuStatus == false) {
+                mnu.style.marginLeft = "0px";
+                menuStatus = true;
+            }
+            else-if(menuStatus==true) {
+                mnu.style.marginLeft = "-300px";
+                menuStatus = false;
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

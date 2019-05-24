@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var width = 100;
+        var intervalID = 0;
+        var diffrence = 2;
+
+        function increase() {
+            //clearInterval(intervalID);
+            //intervalID = setInterval(zoomIn,50);
+            alert("hello");
+        }
+        function decrease() {
+            //clearInterval(intervalID);
+            //intervalID = setInterval(zoomOut,50);
+            alert("hi");
+        }
+        function zoomIn() {
+            if (width < 200) {
+                width = width + diffrence;
+                document.getElementById("img1").style.width = width;
+                
+            }
+            else {
+                clearInterval(intervalID);
+            }
+        }
+        function zoomOut() {
+            if (width > 100) {
+                width = width - diffrence;
+                document.getElementById("img1").style.width = width;
+                
+            }
+            else {
+                clearInterval(intervalID);
+            }
+        }
+
+
+    </script>
+
+    <img src="heart.png" id="img1" onmouseover="increase()"  onmouseout="decrease()" alt="heartbeat" width="100"/>
+</body>
+</html>
